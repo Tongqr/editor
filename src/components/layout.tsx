@@ -24,8 +24,8 @@ const contentStyle: React.CSSProperties = {
   textAlign: "center",
   //   minHeight: 120,
   lineHeight: "120px",
-  color: "#fff",
-  backgroundColor: "#0958d9",
+  color: "#000",
+  backgroundColor: "transparent",
 };
 
 const siderStyle: React.CSSProperties = {
@@ -33,6 +33,7 @@ const siderStyle: React.CSSProperties = {
   lineHeight: "120px",
   color: "#fff",
   backgroundColor: "#1677ff",
+  width: "10%",
 };
 
 const footerStyle: React.CSSProperties = {
@@ -42,7 +43,7 @@ const footerStyle: React.CSSProperties = {
 };
 
 const layoutStyle = {
-  borderRadius: 8,
+  borderRadius: 0,
   overflow: "hidden",
   width: "calc(100vw)",
   height: "calc(100vh)",
@@ -87,12 +88,14 @@ const LayoutComponent: React.FC = ({ children }) => {
               <Link to="/home">home</Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/test">测试</Link>
+              <Link to="/testUseEffect">测试useEffect</Link>
             </Menu.Item>
             <Menu.Item key="3">
               <Link to="/editor">编辑器</Link>
             </Menu.Item>
-            <Menu.Item key="4">option4</Menu.Item>
+            <Menu.Item key="4">
+              <Link to="/board">board</Link>
+            </Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
             <Menu.Item key="5">option5</Menu.Item>

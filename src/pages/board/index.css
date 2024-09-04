@@ -1,0 +1,34 @@
+.board {
+    display: inline-block;
+    border: 2px solid black;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cell.X {
+    color: red;
+}
+
+.cell.O {
+    color: blue;
+}
+
+.winner {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}

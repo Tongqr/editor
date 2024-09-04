@@ -3,10 +3,7 @@ import MonacoEditor from "react-monaco-editor";
 
 const App: React.FC = () => {
   const [code, setCode] = useState("");
-  const [size, setSize] = useState({
-    width: document.body.clientWidth,
-    height: document.body.clientHeight,
-  });
+  const [size, setSize] = useState({ width: 0, height: 0 });
   const options = {
     selectOnLineNumbers: true,
     minimap: {
@@ -15,7 +12,7 @@ const App: React.FC = () => {
   };
   useEffect(() => {
     setSize({
-      width: document.body.clientWidth,
+      width: document.body.clientWidth * 0.55,
       height: document.body.clientHeight,
     });
     console.log("hello", document.body.clientWidth, document.body.clientHeight);
@@ -28,7 +25,7 @@ const App: React.FC = () => {
 
   const handleSize = () => {
     setSize({
-      width: document.body.clientWidth,
+      width: document.body.clientWidth * 0.55,
       height: document.body.clientHeight,
     });
     console.log("size", document.body.clientWidth, document.body.clientHeight);
@@ -46,8 +43,8 @@ const App: React.FC = () => {
   return (
     <MonacoEditor
       // width={window.innerWidth - 100}
-      width={size.width - 100}
-      height={size.height - 10}
+      width={size.width}
+      height={size.height}
       language="javascript"
       theme="vs-dark"
       value={code}
